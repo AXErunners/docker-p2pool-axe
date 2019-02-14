@@ -8,13 +8,13 @@ case "$1" in
     "$docker" pull axerunners/docker-p2pool-axe:latest
     ;;
   start)
-    "$docker" run -d -p 0.0.0.0:7903:7903 -p 0.0.0.0:8999:8999 --env-file=env-mainnet --name p2pool-axe axerunners/docker-p2pool-axe:latest
+    "$docker" run -d -p 0.0.0.0:7923:7923 -p 0.0.0.0:8999:8999 --env-file=env-mainnet --name p2pool-axe axerunners/docker-p2pool-axe:latest
     ;;
   stop)
     "$docker" stop p2pool-axe
     ;;
   start-testnet)
-    "$docker" run -d -p 0.0.0.0:17903:17903 -p 0.0.0.0:8999:8999 --env-file=env-testnet --name p2pool-axe-testnet axerunners/docker-p2pool-axe:latest
+    "$docker" run -d -p 0.0.0.0:17923:17923 -p 0.0.0.0:8999:8999 --env-file=env-testnet --name p2pool-axe-testnet axerunners/docker-p2pool-axe:latest
     ;;
   stop-testnet)
     "$docker" stop p2pool-axe-testnet

@@ -35,7 +35,7 @@ LABEL description="Dockerized P2Pool-AXE"
 WORKDIR /p2pool
 RUN apk --no-cache add python py-twisted
 COPY --from=builder /p2pool/p2pool-axe .
-EXPOSE 7903 8999 17903 18999
+EXPOSE 7923 8999 17923 18999
 
 ENV P2POOL_AXE_HOME /p2pool/p2pool-axe
 WORKDIR $P2POOL_AXE_HOME
